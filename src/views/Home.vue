@@ -26,7 +26,7 @@ import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
   export default {
     data: function () {
       return {
-        message: "Welcome to Vue.js!",
+        message: "Home Map!",
         map: []
       };
     },
@@ -41,10 +41,10 @@ import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
         center: [-77.11, 38.88], // starting position [lng, lat]
-        zoom: 8 // starting zoom
+        zoom: 10 // starting zoom
       });
       const marker1 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
-        .setLngLat([-77.05294, 38.53539])
+        .setLngLat([-77.1108, 38.8790])
         .addTo(map);
       const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
         .setLngLat([-77.10541, 38.88582])
@@ -58,6 +58,8 @@ import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
         .setLngLat(monument)
         .setPopup(popup) // sets a popup on this marker
         .addTo(map);
+      
+    
     }
     },
   };
